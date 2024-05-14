@@ -1,0 +1,40 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  button#playButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100px;  
+    height: 100px; /* Set your desired height */
+}
+
+/* Style the button image */
+button#playButton img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery a {
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    flex: 1; /* Distribute available space evenly among images */
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
