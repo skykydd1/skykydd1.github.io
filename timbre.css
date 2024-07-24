@@ -39,6 +39,14 @@ button#playButton img {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
+.gallery video {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .gallery iframe {
     margin: 10px; /* Adjust as needed */
     font-size: 20px; /* Adjust as needed */
