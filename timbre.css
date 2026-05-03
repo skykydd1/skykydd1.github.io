@@ -1,3 +1,7 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -21,7 +25,7 @@ button#playButton img {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px; /* adjust as needed */
     justify-items: center;
 }
@@ -53,7 +57,62 @@ button#playButton img {
     font-size: 20px; /* Adjust as needed */
 }
 
+h1 {
+    text-align: center;
+}
+
 
 a {
     font-size: 30px; /* Adjust as needed */
 }
+
+.home-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.home-image .image-item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-image img {
+    width: 100%;
+    height: auto;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-title {
+    color: #333;
+    text-decoration: none;
+}
+
