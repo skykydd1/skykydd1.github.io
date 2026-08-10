@@ -38,11 +38,19 @@ button#playButton {
     border: none;
     cursor: pointer;
     width: 100px;
-    height: 100px;
+    height: 90px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+}
+
+/* raise the play button slightly above the center of the top row */
+button#playButton {
+    align-self: flex-start;
+    position: relative;
+    z-index: 50;
+    transform: translateY(-250px);
 }
 
 /* Style the button image */
@@ -114,6 +122,12 @@ a {
     width: min(280px, 100%);
 }
 
+.home-row .nav-links {
+    position: relative;
+    z-index: 30;
+    transform: translateY(-220px);
+}
+
 .nav-links a {
     width: 100%;
     text-align: center;
@@ -127,7 +141,7 @@ a {
     width: 100%;
 }
 
-.home-image .image-item {
+.home-image .image-item { 
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -135,6 +149,8 @@ a {
     align-items: center;
     flex-direction: column;
 }
+    
+
 
 .home-image img {
     width: 100%;
@@ -154,6 +170,12 @@ a {
     text-decoration: none;
 }
 
+/* Place the caption above the homepage image (so "The Links" appears on top) */
+.home-image .image-item .image-title {
+    order: -1;
+    margin-bottom: 2px;
+}
+
 @media (max-width: 600px) {
     a {
         font-size: 24px;
@@ -171,3 +193,74 @@ a {
     }
 }
 
+/* Ensure the specific Link image is centered and constrained */
+img[src$="Link_png_8:10:26.png"] {
+    max-width: 240px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 40;
+    transform: translateY(-250px);
+}
+
+/* TADC page: constrain and center images */
+.tadc-page .gallery,
+.tadc-page .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+    justify-content: center;
+    gap: 20px;
+    justify-items: center;
+    width: min(1000px, 100%);
+    margin: 0 auto;
+}
+
+/* Ensure gallery links and their images are centered */
+.tadc-page .gallery a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    max-width: 640px;
+    text-align: center;
+}
+.tadc-page .gallery a img {
+    margin: 0 auto;
+}
+
+/* Make TADC images share a common max height so they line up visually */
+.tadc-page img {
+    max-height: 480px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* If viewport is narrow, reduce height */
+@media (max-width: 700px) {
+    .tadc-page img {
+        max-height: 320px;
+    }
+}
+
+/* Make Jax 2 and Clue span full width of the TADC grid and enlarge them */
+.tadc-page a[href$="TADC_Jax_2.jpeg"],
+.tadc-page a[href$="TADC, Clue.jpeg"] {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+.tadc-page a[href$="TADC_Jax_2.jpeg"] img,
+.tadc-page a[href$="TADC, Clue.jpeg"] img {
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    max-height: none;
+}
+
+
+img#Link_png_8\:10\:26 {
+    align-self: flex-start;
+    transform: translateY(-300px);
+}
