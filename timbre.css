@@ -43,14 +43,7 @@ button#playButton {
     justify-content: center;
     align-items: center;
     padding: 0;
-}
-
-/* raise the play button slightly above the center of the top row */
-button#playButton {
-    align-self: flex-start;
-    position: relative;
-    z-index: 50;
-    transform: translateY(-250px);
+    flex: 0 0 auto;
 }
 
 /* Style the button image */
@@ -114,6 +107,18 @@ a {
     padding: 0 16px;
 }
 
+.home-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: nowrap;
+    flex: 1 1 600px;
+    max-width: 800px;
+    width: 100%;
+    transform: translateY(-80px);
+}
+
 .nav-links {
     display: flex;
     flex-direction: column;
@@ -125,7 +130,7 @@ a {
 .home-row .nav-links {
     position: relative;
     z-index: 30;
-    transform: translateY(-220px);
+    transform: none;
 }
 
 .nav-links a {
@@ -133,24 +138,15 @@ a {
     text-align: center;
 }
 
-.home-image {
-    display: flex;
-    justify-content: center;
-    flex: 1 1 600px;
-    max-width: 800px;
-    width: 100%;
-}
-
 .home-image .image-item { 
-    width: 100%;
-    margin: 0 auto;
+    width: auto;
+    max-width: 240px;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-    
-
 
 .home-image img {
     width: 100%;
@@ -212,7 +208,6 @@ img[src$="Link_png_8:10:26.png"] {
     margin: 0 auto;
     position: relative;
     z-index: 40;
-    transform: translateY(-250px);
 }
 
 /* TADC page: constrain and center images */
