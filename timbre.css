@@ -165,6 +165,17 @@ a {
     text-align: center;
 }
 
+.image-gallery .flex-bottom-center {
+    grid-column: 2;
+    justify-self: center;
+}
+
+@media (max-width: 760px) {
+    .image-gallery .flex-bottom-center {
+        grid-column: auto;
+    }
+}
+
 .image-title {
     color: #333;
     text-decoration: none;
@@ -234,6 +245,15 @@ img[src$="Link_png_8:10:26.png"] {
 .tadc-page img {
     max-height: 480px;
     width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Inktober page sizing */
+.image-gallery .image-item img {
+    width: 180px;
+    max-width: 180px;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
