@@ -3,22 +3,24 @@ const playButton = document.getElementById('playButton');
 const myAudio = document.getElementById('dontpushme');
 
 if (playButton && myAudio) {
-    let timesPushed = 0;
+    playButton.type = 'button';
+    myAudio.preload = 'auto';
 
-    playButton.addEventListener('click', () => {
-        timesPushed = timesPushed + 1;
-
-        if (timesPushed == 10) {
-            // TODO say "hey! stop that!"
-        }
-
-        if (myAudio.paused) {
-            myAudio.play();
-        } else {
-            myAudio.pause();
+    const toggleAudio = async () => {
+        try {
+            if (myAudio.paused) {
+                await myAudio.play();
+            } else {
+                myAudio.pause();
+                myAudio.currentTime = 0;
+            }
+        } catch (error) {
+            console.error('Audio playback failed:', error);
             myAudio.currentTime = 0;
         }
-    });
+    };
+
+    playButton.addEventListener('click', toggleAudio);
 }
 
 const gallery = document.getElementById('ink-gallery');
