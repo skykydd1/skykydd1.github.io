@@ -138,6 +138,18 @@ a {
     text-align: center;
 }
 
+.centered-page-links {
+    width: min(560px, calc(100% - 24px));
+    margin: 28px auto 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered-page-links a {
+    width: 100%;
+    text-align: center;
+}
+
 .home-image .image-item { 
     width: auto;
     max-width: 240px;
@@ -175,6 +187,99 @@ a {
 .image-title {
     color: #333;
     text-decoration: none;
+}
+
+#webcomic-legacy {
+    display: none;
+}
+
+.comic-viewer {
+    width: min(1000px, calc(100% - 32px));
+    margin: 24px auto 40px;
+}
+
+.comic-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.comic-toolbar {
+    width: min(760px, 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.comic-nav {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #2b2b2b;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+}
+
+.comic-nav img {
+    display: block;
+    width: 101px;
+    height: auto;
+    max-height: 77px;
+    object-fit: contain;
+}
+
+.comic-nav:hover,
+.comic-nav:focus-visible {
+    transform: translateY(-1px);
+    opacity: 0.85;
+}
+
+.comic-counter {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.comic-page {
+    width: min(760px, 100%);
+    margin: 0;
+    text-align: center;
+}
+
+.comic-page img {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #d7d0bf;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comic-page figcaption {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.comic-description {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
 }
 
 /* Place the caption above the homepage image (so "The Links" appears on top) */
