@@ -28,6 +28,11 @@ if (webcomicGallery) {
             title: 'D&T Page 5',
             description: '-'
         },
+        {
+            src: `${pageBase}images/D&T Images/Page 6.jpeg`,
+            title: 'D&T Page 6',
+            description: '-'
+        },
     ];
 
     let currentIndex = 0;
